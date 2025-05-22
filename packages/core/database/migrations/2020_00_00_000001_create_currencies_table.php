@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('code', 10)->index();
             $table->string('symbol', 25);
             $table->string('format', 50);
-            $table->string('exchange_rate')->nullable();
+            $table->unsignedBigInteger('exchange_rate')->nullable();
         });
     }
 
