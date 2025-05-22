@@ -12,7 +12,7 @@ return new class extends Migration
     {
         Schema::table($this->getTableName('currencies'), function (Blueprint $table): void {
             $table->string('code', 10)->unique()->change();
-            $table->decimal('exchange_rate')->nullable()->change();
+            // $table->unsignedBigInteger('exchange_rate')->nullable()->change();
             $table->boolean('is_enabled')->default(true);
         });
     }
